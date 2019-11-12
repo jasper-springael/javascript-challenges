@@ -1,16 +1,37 @@
-/* becode/javascript
- *
- * /04-dates/03-age-by-select/script.js - 4.3: calculateur d'âge
- *
- * coded by leny@BeCode
- * started at 26/10/2018
- */
 
-// NOTE: don't focus on the existing code structure for now.
-// You will have time to focus on it later.
 
-(function() {
+function alertBirthday() {
 
-    // your code here
+    document.getElementById("run").addEventListener("click",function(){
+        
+        let birthDay = (document.getElementById("dob-day").value)*1; /*outputs were a string*/
+        console.log(birthDay);
+        let birthMonth = (document.getElementById("dob-month").value)*1;
+        console.log(birthMonth);
+        let birthYear = (document.getElementById("dob-year").value)*1;
+        console.log(birthYear);
+        let current = new Date();
+        let currentDay = current.getDay();
+        console.log(currentDay);
+        let currentMonth = current.getMonth()+1;
+        console.log(currentMonth);
+        let currentYear = current.getFullYear();
+        console.log(currentYear);
+        let age1 = currentYear-birthYear-1;
+        console.log(age1);
+        let age2 = currentYear-birthYear;
+        console.log(age2);
+        
+        if (currentMonth*100+currentDay < birthMonth*100+birthDay)
+            alert(`This is your age: ${age1}`);
+        else {
+            alert(`This is your age: ${age2}`);
+        }
+    });
+};
+alertBirthday();
 
-})();
+/*maand en dag van vandaag opvragen, maand *100
+vergelijken met je geboortemaand en dag
+als kleiner=> gewoon jaren van mekaar aftrekken en displayen
+anders jaren+1*/
