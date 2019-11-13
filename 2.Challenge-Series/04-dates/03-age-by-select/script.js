@@ -31,7 +31,3 @@ function alertBirthday() {
 };
 alertBirthday();
 
-/*maand en dag van vandaag opvragen, maand *100
-vergelijken met je geboortemaand en dag
-als kleiner=> gewoon jaren van mekaar aftrekken en displayen
-anders jaren+1*/
