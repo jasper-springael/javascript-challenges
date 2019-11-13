@@ -1,13 +1,4 @@
-/* becode/javascript
- *
- * /05-arrays/05-walk-three/script.js - 5.5: parcours de tableau (3)
- *
- * coded by leny@BeCode
- * started at 26/10/2018
- */
 
-// NOTE: don't focus on the existing code structure for now.
-// You will have time to focus on it later.
 
 (function() {
 
@@ -38,7 +29,8 @@
             email: "mcoal4@creativecommons.org",
         },
     ];
-
-    // your code here
+    document.addEventListener("click",function(){
+        people.forEach(x => console.log(x.firstname + ' ' +x.lastname));
+    })
 
 })();
