@@ -1,17 +1,8 @@
-/* becode/javascript
- *
- * /05-arrays/10-reduce-array/script.js - 5.10: utilisation d'un reducer
- *
- * coded by leny@BeCode
- * started at 26/10/2018
- */
 
-// NOTE: don't focus on the existing code structure for now.
-// You will have time to focus on it later.
 
 (function() {
 
-    var people = [
+    let people = [
         {
             firstname: "Grenville",
             lastname: "Stive",
@@ -86,9 +77,14 @@
             firstname: "Jo-ann",
             lastname: "Sacase",
             age: 81,
-        },
+        }
     ];
 
-    // your code here
-
+    document.getElementById("run").addEventListener("click",function(){
+        console.log(people.reduce((acc,value) => acc + value.age,0));
+        // function(accumulator,currentValue) {
+        //     return  accumulator+=currentValue.age;
+        // },0));
+    });
 })();
+
