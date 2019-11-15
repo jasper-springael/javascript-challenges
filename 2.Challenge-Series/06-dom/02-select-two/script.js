@@ -1,10 +1,4 @@
-
-
-(function() {
-
-$('#target').change(function() {
-    $('target').innerHTML
-}
+(function(){
+    document.querySelector("#target").innerHTML='owned';  
 
 })();
-
